@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffc5d9;
+    height: 70vh;
+    width: 100%;
+}
+.container{
+    width: 800px;
+    background-color: #ff8aae;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+.head{
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+}
+.head h1{
+    margin-top: 0;
+    background-color: #7a406a;
+    width: 100%;
+    text-align: center;
+    padding:10px;
+    color:white;
+}
+.page-header{
+    color: #4f2e50;
+    font-size: 45px;
+    margin-top: 1.2em;
+    display: ruby-text;
+}
+.container .head #addButton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+#addButtonTwo{
+    position: absolute;
+    right: 55px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background-color:#0848c1 ;
+    color: white;
+}
+#nameInput{
+    position: absolute;
+    top: 8px;
+    right: 100px;
+    width: 0;
+    height: 40px;
+    border-radius: 16px;
+    border:none;
+    transition: all 0.3s ease-in-out;
+}
+#nameInput.active{
+    width:200px;
+    padding: 10px;
+
+}
+.checked{
+    text-decoration: line-through;
+}
+.done{
+    background-color:rgba(0, 252, 13, 0.485)!important;
+}
+.fa-x{
+    background-color: red!important;
+}
+.container input.active{
+    width: 200px;
+}
+.container input::placeholder{
+    padding: 10px;
+}
+.tasks{
+    padding: 15px;
+    padding-top: 0;
+}
+#myTask{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    background-color: #fffbf4b5;
+    margin: 5px;
+    border-radius: 6px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+.deactivate{
+    display: none;
+}
+.throwLine{
+    text-decoration: line-through;
+}
+.myIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(193, 192, 192);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.date{
+    position: absolute;
+    left: 0px;
+    padding: 8px 15px;
+    font-size: 12px;
+    color: gray;
+    bottom: -6px;
+}
+#delete,#check,#edit{
+    cursor: pointer;
+    color: white;
+}
+#delete:hover,#check:hover,#edit:hover{
+    background-color:rgb(85, 85, 85);
+    color: rgb(255, 73, 255);
+}
+#delete{
+    background-color: red;
+}
+#check{
+    background-color: darkgreen;
+}
+#edit{
+    background-color: blue;
+
+}
