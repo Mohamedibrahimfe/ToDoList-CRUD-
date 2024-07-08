@@ -4,17 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #ffc5d9;
+    background-color: #F9EDED;
     height: 70vh;
     width: 100%;
 }
 .container{
     width: 800px;
-    background-color: #ff8aae;
+    background-color: #6468de7a;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     position: relative;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 247, 0.477);
     border-radius: 6px;
 }
 .head{
@@ -25,15 +25,15 @@ body{
 }
 .head h1{
     margin-top: 0;
-    background-color: #7a406a;
+    background-color: #3F418D;
     width: 100%;
     text-align: center;
     padding:10px;
     color:white;
 }
 .page-header{
-    color: #4f2e50;
-    font-size: 45px;
+    color: #3F418D;
+    font-size: 70px;
     margin-top: 1.2em;
     display: ruby-text;
 }
@@ -52,7 +52,12 @@ body{
     margin-right: 8px;
     border: none;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    color: black;
+}
+#addButton:hover{
+    transform: scale(1.1);
 }
 #addButtonTwo{
     position: absolute;
@@ -67,9 +72,12 @@ body{
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    background-color:#0848c1 ;
-    color: white;
+    transition: all 0.2s ease-in-out;
+    background-color: white; ;
+    color: black;
+}
+#addButtonTwo:hover{
+    transform: scale(1.1);
 }
 #nameInput{
     position: absolute;
@@ -91,6 +99,9 @@ body{
 }
 .done{
     background-color:rgba(0, 252, 13, 0.485)!important;
+}
+.change-icon{
+    background: url('fa-x');
 }
 .fa-x{
     background-color: red!important;
@@ -114,6 +125,12 @@ body{
     background-color: #fffbf4b5;
     margin: 5px;
     border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+#myTask:hover{
+    box-shadow: 0 5px 15px rgba(76, 1, 162, 0.597);
+    transform: scale(1.03);
 }
 .icons{
     display: flex;
@@ -149,8 +166,8 @@ body{
     color: white;
 }
 #delete:hover,#check:hover,#edit:hover{
-    background-color:rgb(85, 85, 85);
-    color: rgb(255, 73, 255);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 #delete{
     background-color: red;

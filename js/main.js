@@ -1,16 +1,34 @@
+
 let tasks=[
     // {
     // "title":"Javascript",
     // "date":"12/12/2021",
     // "isDone":true
+    // },
+    // {
+    // "title":"Html",
+    // "date":"12/12/2021",
+    // "isDone":false
+    // },
+    // {
+    // "title":"Css",
+    // "date":"12/12/2021",
+    // "isDone":false
     // }
 
 ]
+function getTasksFromStorage(){
+    tasks=JSON.parse(localStorage.getItem("tasks"));
+    if(tasks==null){
+        tasks=[]
+    }
+}
+getTasksFromStorage();
 function fillAllContent(){
     document.getElementById('tasks').innerHTML=""
 let id = 0;
 for(task of tasks){
-    let content=`<div ${task.isDone?'done':''} class="myTask${id}" id="myTask">
+    let content=`<div  class="${task.isDone?'done change-icon':''} myTask" id="myTask">
                 <h2 id="title">${task.title}</h2>
                 <div class="date">
                     <i class="myCalendar fa-regular fa-calendar"></i>
@@ -24,31 +42,29 @@ for(task of tasks){
             </div>`
     document.getElementById('tasks').innerHTML+=content;
     id++
-    if(task.isDone){
-        console.log(document.querySelector(`.myTask-${id}`))
-        
-    }
 }
 }
+fillAllContent();
 // show input field
 document.getElementById('addButton').addEventListener('click',()=>{
     document.getElementById('nameInput').classList.toggle('active');
 })
 
+// add the task
 document.getElementById('addButtonTwo').addEventListener('click',()=>{
-    
     const name=document.getElementById('nameInput').value;
     if(name==''){
         alert('Please enter task name')
         return
     }
     const currentTime = new Date().toLocaleString();
-    let taskobj={
+    let taskObj={
         "title":name,
         "date":currentTime,
         "isDone":false
     }
-    tasks.push(taskobj);
+    tasks.push(taskObj);
+    saveData()
     fillAllContent();
 })
 // delete function
@@ -58,29 +74,29 @@ function deleteTask(id){
     
         tasks.splice(id,1);
         fillAllContent();
-            
+        saveData()
     }
 }
 // edit function
 function editTask(id){
-    let confirmation=confirm(`Are you sure you want to edit : ${task.title}`)
-    if (confirmation==false){
-        return
-    }
     let newName=prompt(`Enter new name for ${task.title}`,`${task.title}`)
     if(newName==null){
         return
     }
     tasks[id].title=newName;
     fillAllContent();
+    saveData()
 }
 // check function
 function completeTask(id){
-    if(tasks[id].isDone==true){
-        tasks[id].isDone=false;
+        tasks[id].isDone = !tasks[id].isDone;
         fillAllContent();
-        return
-    }
-    tasks[id].isDone=true;
-    fillAllContent();
+        saveData()
 }
+
+// storage function
+function saveData(){
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+}
+
+
