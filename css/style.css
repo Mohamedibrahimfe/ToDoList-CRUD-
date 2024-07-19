@@ -4,18 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #F9EDED;
+    background-color: #F5F5F5;
     height: 70vh;
     width: 100%;
 }
 .container{
     width: 800px;
-    background-color: #6468de7a;
+    background-color: #6468de41;
     margin: auto;
     margin-top: 50px;
     position: relative;
-    box-shadow: 0 10px 20px rgba(0, 0, 247, 0.477);
-    border-radius: 6px;
+    box-shadow: 0 10px 10px rgba(107, 107, 107, 0.265);
 }
 .head{
     display: flex;
@@ -25,7 +24,7 @@ body{
 }
 .head h1{
     margin-top: 0;
-    background-color: #3F418D;
+    background-color: #3f428d;
     width: 100%;
     text-align: center;
     padding:10px;
