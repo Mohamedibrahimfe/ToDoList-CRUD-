@@ -34,7 +34,8 @@ body{
     color: #3F418D;
     font-size: 70px;
     margin-top: 1.2em;
-    display: ruby-text;
+    display: flex;
+    justify-content: center;
 }
 .container .head #addButton{
     position: absolute;
